@@ -1,11 +1,10 @@
-/* Ensuring the body styles apply */
 body {
     margin: 0;
     font-family: 'Instrument Serif', serif;
-    overflow: hidden; /* Prevents scrollbar */
+    overflow: hidden; /* prevents scrollbar */
   }
   
-  /* Styling the container to hide overflow */
+  /* styling the container to hide overflow */
   .text-container {
     white-space: nowrap;
     overflow: hidden;   
@@ -16,7 +15,6 @@ body {
     align-items: center;
   }
   
-  /* Styling the scrolling text */
   .scrolling-text {
     display: inline-block;
     font-size: 5rem;
@@ -26,3 +24,9 @@ body {
     font-style: italic;
   }
   
+  video {
+    width: 100%;  
+    height: auto; 
+    object-fit: cover;   
+    z-index: -1;  
+  }

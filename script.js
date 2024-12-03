@@ -1,30 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Register the GSAP ScrollTrigger plugin (if used in other animations)
     gsap.registerPlugin(ScrollTrigger);
   
-    // Select elements
+    // select elements
     const container = document.querySelector('.text-container');
     const text = document.querySelector('.scrolling-text');
   
-    // Dynamically clone the text to fill the container's width
+    // dynamically clone the text to fill the container's width
     let containerWidth = container.offsetWidth;
     let textWidth = text.offsetWidth;
   
-    while (textWidth < containerWidth * 2) { // Clone until it's twice the container width
-      const clone = text.cloneNode(true);   // Create a clone of the text
-      container.appendChild(clone);         // Append the clone to the container
-      textWidth += clone.offsetWidth;       // Update the total width of all text
+    while (textWidth < containerWidth * 3) { 
+      const clone = text.cloneNode(true);   
+      container.appendChild(clone);        
+      textWidth += clone.offsetWidth;       
     }
   
     // GSAP animation to scroll text infinitely
     gsap.fromTo(
-      container.children,                   // Apply animation to all child elements
-      { x: 0 },                             // Start position
+      container.children,                
+      { x: 0 },                             
       {
-        x: `-${containerWidth}px`,          // Scroll left by the container's width
-        duration: 10,                       // Duration for one full scroll
-        ease: "none",                       // Linear movement for smooth looping
-        repeat: -1                          // Infinite loop
+        x: `-${containerWidth}px`,         
+        duration: 10,                     
+        ease: "none",                       
+        repeat: -1                         
       }
     );
   });
