@@ -8,14 +8,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="section">
+        <div class="overlay">
+            <div class ="text-overlay">
+                <h1 class="bahay-title">/ BAHAY /</h1>
+                <img id="flower-img" src="/media/flower.png" alt="Tropical flower">
+                <p class="bahay-text">a website about home. best viewed on desktop, fullscreen.</p>
+            </div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
         <div class="text-container">
             <div class="scrolling-text">/ WHAT IS HOME? / HOW DO WE DEFINE IT?</div>
         </div>
-        <video autoplay muted loop playsinline>
-            <source src="/media/children.mp4" type="video/mp4">
-        </video>
-        <div id="bahay-text">BAHAY.</div>    
+
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="childhood-video">
+                <source src="/media/children.mp4" type="video/mp4">
+            </video>   
+        </div>
+
+        <div class="scroll-container">
+            <p class="scroll-text">scroll down</p>
+            <div class="arrow-container">
+              <div class="arrow">↓</div>
+            </div>
+          </div>
+
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
