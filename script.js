@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
   
-    // Preloader animation
-    // Animate bars
+    // preloader animation
+    // animate bars
     gsap.to(".bar", 1.5, {
         delay: 3.5,
         height: 0,
@@ -11,31 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         ease: "power4.inOut",
     });
-    // Animate BAHAY text
-    gsap.fromTo(
-        ".bahay-title", 
-        { opacity: 0, scale: 0.5 }, 
-        { 
-            opacity: 1, 
-            scale: 1, 
-            delay: 3.5, 
-            duration: 1.2, 
-            ease: "power2.out",
-            onComplete: () => {
-            },
-        }
-    );
 
-    // Disappear after a delay (bahay-text)
+    // disappear after a delay (bahay-text)
     gsap.to(".bahay-text", {
         opacity: 0,
         scale: 0.5,
-        delay: 1.5, // Disappear shortly after appearing
+        delay: 1.5, // disappear shortly after appearing
         duration: 1,
         ease: "power2.in",
     });
 
-    // Disppear after delay (flower)
+    // disppear after delay (flower)
     gsap.to("#flower-img", {
         opacity: 0,
         scale: 0.5,
@@ -44,8 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.in",
     });
 
-// Text marquee animation
-    // select elements
+    // text marquee animation
     const container = document.querySelector('.text-container');
     const text = document.querySelector('.scrolling-text');
   
@@ -83,13 +68,13 @@ gsap.fromTo(
       duration: 1.2, 
       ease: "power2.out",
       onComplete: () => {
-        // Trigger the scroll text and arrow animations after "BAHAY" appears
+        // trigger the scroll text and arrow animations after "BAHAY" appears
         triggerScrollAnimations();
       }
     }
   );
   
-  // Function to trigger the scroll text and arrow animations
+  // function to trigger the scroll text and arrow animations
   function triggerScrollAnimations() {
     gsap.to(".scroll-text", {
       opacity: 1, 
@@ -118,6 +103,63 @@ gsap.fromTo(
       ease: "power1.inOut",
     });
   }  
+
+    // Section 2 ScrollTrigger animations
+    gsap.from(".section-2 .childhood-text", {
+        opacity: 0,
+        y: 50,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".section-2",
+            start: "top bottom", 
+            end: "bottom top",   
+            scrub: true,         
+        }
+    });
+
+    // staggered animation for text
+    gsap.from(".section-2 .childhood-text .c1", {
+        opacity: 0,
+        y: 50,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".section-2",
+            start: "top bottom", 
+            end: "bottom top",  
+            scrub: true,         
+        }
+    });
+
+    gsap.from(".section-2 .childhood-text .c2", {
+        opacity: 0,
+        y: 50,
+        duration: 1.5,
+        ease: "power2.out",
+        delay: 0.5,  
+        scrollTrigger: {
+            trigger: ".section-2",
+            start: "top bottom", 
+            end: "bottom top",   
+            scrub: true,         
+        }
+    });
+
+    // images roll in one by one
+    gsap.from(".section-2 .childhood-image", {
+        opacity: 0,
+        x: -100,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".section-2",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+        }
+    });
     
   });
   
