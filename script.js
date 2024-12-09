@@ -129,7 +129,7 @@ gsap.fromTo(
             start: "top bottom", 
             end: "bottom top",  
             scrub: true,         
-        }
+    }
     });
 
     gsap.from(".section-2 .childhood-text .c2", {

@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Instrument Serif', serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
 .section {
