@@ -16,7 +16,6 @@ body {
 }
 
   
-  /* styling the container to hide overflow */
 .text-container {
     white-space: nowrap;
     overflow: hidden;   
@@ -268,8 +267,8 @@ body {
 
 .end-message {
     width: 100%;
-    text-align: center;      /* Center the content horizontally */
-    padding: 20px;           /* Add padding for spacing */
+    text-align: center;     
+    padding: 20px;       
 }
 
 .closing-text {
