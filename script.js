@@ -192,7 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
 
-        
+    
+    // closing marquee animation (same as above one)
     const closingContainer = document.querySelector('.closing-marquee');
     const closingText = closingContainer.querySelector('.scrolling-text-2');
 
