@@ -30,6 +30,23 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.in",
     });
 
+        // GSAP animation for "BAHAY" text entrance
+        gsap.fromTo(
+            ".bahay-title", 
+            { opacity: 0, scale: 0.5 }, 
+            { 
+            opacity: 1, 
+            scale: 1, 
+            delay: 3.5, 
+            duration: 1.2, 
+            ease: "power2.out",
+            onComplete: () => {
+                // trigger the scroll text and arrow animations after "BAHAY" appears
+                triggerScrollAnimations();
+            }
+            }
+        );
+
     // text marquee animation
     const container = document.querySelector('.text-container');
     const text = document.querySelector('.scrolling-text');
@@ -55,24 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
         repeat: -1                         
       }
     );
-
-
-// GSAP animation for "BAHAY" text entrance
-gsap.fromTo(
-    ".bahay-title", 
-    { opacity: 0, scale: 0.5 }, 
-    { 
-      opacity: 1, 
-      scale: 1, 
-      delay: 3.5, 
-      duration: 1.2, 
-      ease: "power2.out",
-      onComplete: () => {
-        // trigger the scroll text and arrow animations after "BAHAY" appears
-        triggerScrollAnimations();
-      }
-    }
-  );
   
   // function to trigger the scroll text and arrow animations
   function triggerScrollAnimations() {
@@ -160,6 +159,38 @@ gsap.fromTo(
             scrub: true,
         }
     });
-    
+
+    //section 3 -- clear to blurry text
+    gsap.fromTo(
+        ".blurry-text",
+        { filter: "blur(0px)" }, 
+        {
+          filter: "blur(5px)",    
+          duration: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".blurry-text",
+            start: "top 60%",    
+            end: "top 20%",      
+            scrub: true,          
+          },
+        }
+      );
+      
+      // questions about home roll in
+      gsap.from(".home-question .question-part", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.25,   
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-3", 
+          start: "top bottom",    
+          end: "bottom top",      
+          scrub: true,            
+        },
+      });
+
   });
   

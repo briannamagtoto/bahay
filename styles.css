@@ -11,6 +11,10 @@ body {
     height: 100vh;
 }
 
+.section-1 {
+    overflow: hidden;
+}
+
   
   /* styling the container to hide overflow */
 .text-container {
@@ -33,16 +37,14 @@ body {
     font-style: italic;
   }
 
-.video-container {
-    overflow: hidden;
-  }
 
 #childhood-video {
     width: 100vw;  
-    height: 91vh; 
+    height: 100vh; 
+    overflow: hidden;
     object-fit: cover;   
     z-index: -1;  
-    position: absolute;
+
   }
 
 .overlay {
@@ -72,7 +74,7 @@ body {
     margin-top: 20%;
     background-image: url("/media/floral.png");
     text-align: center;
-    
+    z-index: 5;
 }
 
 .bahay-title {
@@ -80,7 +82,7 @@ body {
     font-style: italic;
     color: #f3e3b8;
     text-shadow: 5px 5px rgb(39, 32, 2);
-    
+    z-index: 10;
   }
 
 .bahay-text {
@@ -97,7 +99,7 @@ body {
 
 .scroll-container {
   position: absolute;
-  bottom: 20px; /* Adjust to place the text and arrow at the bottom */
+  bottom: 20px; 
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -106,7 +108,7 @@ body {
 
 .scroll-text,
 .arrow-container {
-  opacity: 0; /* Initially hidden */
+  opacity: 0; 
   visibility: hidden;
 }
 
@@ -180,4 +182,81 @@ body {
     position: relative;
     justify-content: space-between; 
     justify-content: center;
+}
+
+.section-3 {
+    position: relative;
+    font-family: cursive;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-image: url("/media/background-img.png")
+}
+
+.page-break {
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.blurry-text-container {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 70%;
+    text-align: left;
+    margin-bottom: 5%;
+  }
+
+.blurry-text {
+    font-size: clamp(3rem, 2vw, 2.5rem); 
+}
+
+.centered-text-container {
+    margin-top: 5%;
+}
+.home-question {
+    font-size: 4rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.question-part {
+    font-size: 3.5rem;
+    font-style: italic;
+}
+ 
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
+    gap: 20px;  
+    width: 100%; 
+    max-width: 1200px; 
+    margin-top: 2%;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; 
+    object-fit: cover;
+}
+
+.section-4 {
+    position: relative;
+    font-family: cursive;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-image: url("/media/background-img.png")
 }
