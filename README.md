@@ -9,3 +9,5 @@
 1. Clone the repository
 2. Navigate to the project folder
 3. Open the index.html file on your web browser 
+
+Made by Brianna Magtoto / CS50 Final Project / Yale University
