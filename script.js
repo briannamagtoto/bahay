@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.in",
     });
 
-        // GSAP animation for "BAHAY" text entrance
-        gsap.fromTo(
-            ".bahay-title", 
+    // GSAP animation for "BAHAY" text entrance
+    gsap.fromTo(
+         ".bahay-title", 
             { opacity: 0, scale: 0.5 }, 
             { 
             opacity: 1, 
@@ -191,6 +191,31 @@ document.addEventListener("DOMContentLoaded", () => {
           scrub: true,            
         },
       });
+
+        
+    const closingContainer = document.querySelector('.closing-marquee');
+    const closingText = closingContainer.querySelector('.scrolling-text-2');
+
+
+    let closingContainerWidth = closingContainer.offsetWidth;
+    let closingTextWidth = closingText.offsetWidth;
+
+    while (closingTextWidth < closingContainerWidth * 3) {
+        const clone = closingText.cloneNode(true);
+        closingContainer.appendChild(clone);
+        closingTextWidth += clone.offsetWidth;
+    }
+
+    gsap.fromTo(
+        closingContainer.children,   
+        { x: 0 },                    
+        {
+            x: `-${closingTextWidth}px`,
+            duration: 60,            
+            ease: "none",           
+            repeat: -1              
+        }
+    );
 
   });
   

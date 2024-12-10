@@ -70,19 +70,23 @@ body {
     z-index: 10;
   }
 
-  .bahay-container {
-    margin-top: 20%;
-    background-image: url("/media/floral.png");
-    text-align: center;
-    z-index: 5;
-}
-
 .bahay-title {
-    font-size: clamp(7rem, 9vw, 9rem);
+    font-size: clamp(7rem, 9vw, 9rem); 
     font-style: italic;
     color: #f3e3b8;
     text-shadow: 5px 5px rgb(39, 32, 2);
     z-index: 10;
+    opacity: 1;
+    position: absolute;
+    top: 25%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-image: url("/media/floral.png");
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    padding-right: 80px;
+    text-align: center; 
   }
 
 .bahay-text {
@@ -259,4 +263,58 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url("/media/background-img.png")
+}
+
+
+.end-message {
+    width: 100%;
+    text-align: center;      /* Center the content horizontally */
+    padding: 20px;           /* Add padding for spacing */
+}
+
+.closing-text {
+    font-size: clamp(10rem, 6vw, 6rem); 
+    font-family: cursive;
+    color: #211700;
+    margin-bottom: 20px;
+    text-align: center;   
+    top: 10%;        
+}
+
+.closing-subtext {
+    font-size: clamp(4rem, 2vw, 2rem);  
+    color: #211700;
+    font-style: italic;
+    text-align: center;    
+    line-height: 1.5;       
+    margin-bottom: 30px;
+    background-color: rgba(118, 107, 78, 0.5);
+}
+
+.closing-marquee {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    font-size: 5rem;
+    white-space: nowrap; 
+    font-style: italic;
+}
+
+.scrolling-text-2 {
+    display: inline-block;
+    font-size: 5rem;
+    color: #554a32;
+    white-space: nowrap; 
+    -webkit-text-stroke: 1px black;
+    font-style: italic;
+}
+
+.credit-text {
+    font-size: clamp(2rem, 2vw, 2rem);  
+    font-family: 'Instrument Serif', serif;
+    color: #483811;
+    text-align: center;      
+    margin-top: 10px;
+    background-image: url("/media/floral.png");
 }
